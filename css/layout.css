@@ -1,0 +1,59 @@
+/* Screens + responsive board grid. */
+.screen { display: none; min-height: 100vh; }
+.screen.active { display: block; }
+
+/* ---- title ---- */
+.title-wrap {
+  max-width: 560px; margin: 0 auto; padding: 12vh 24px 40px; text-align: center;
+}
+.title-mark { font-size: 28px; line-height: 1; color: var(--c-warm); letter-spacing: 4px; }
+.game-title { font-size: 56px; letter-spacing: 10px; margin: 12px 0 4px; }
+.tagline { font-size: 17px; color: var(--c-ink); }
+.title-sub { color: var(--c-ink-soft); }
+.title-buttons { display: flex; gap: 12px; justify-content: center; margin: 28px 0 16px; flex-wrap: wrap; }
+.title-records { color: var(--c-ink-soft); font-size: 13px; }
+.title-foot { margin-top: 40px; color: var(--c-ink-soft); font-style: italic; }
+
+/* ---- setup / summary / debrief ---- */
+.setup-wrap, .summary-wrap, .debrief-wrap {
+  max-width: 760px; margin: 0 auto; padding: 32px 20px 60px;
+}
+.setup-title { font-size: 30px; }
+.pick-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.setup-buttons { display: flex; gap: 12px; margin-top: 24px; justify-content: flex-end; }
+.seed-input {
+  font: inherit; padding: 10px 12px; border: 1px solid var(--c-line); border-radius: var(--radius);
+  width: 220px; text-transform: uppercase; background: var(--c-panel);
+}
+
+/* ---- board ---- */
+.board-grid {
+  display: grid;
+  grid-template-columns: 290px 1fr 290px;
+  grid-template-areas: "top top top" "side actions log";
+  gap: 14px;
+  max-width: 1280px; margin: 0 auto; padding: 14px;
+  align-items: start;
+}
+.topbar { grid-area: top; }
+.side-col { grid-area: side; display: flex; flex-direction: column; gap: 14px; }
+.actions-col { grid-area: actions; }
+.log-col { grid-area: log; max-height: 78vh; overflow-y: auto; }
+
+.actions-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;
+}
+
+@media (max-width: 1023px) {
+  .board-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "top top" "side side" "actions actions" "log log";
+  }
+  .log-col { max-height: 32vh; }
+}
+@media (max-width: 640px) {
+  .board-grid { grid-template-columns: 1fr; grid-template-areas: "top" "side" "actions" "log"; }
+  .actions-grid { grid-template-columns: 1fr; }
+  .pick-row { grid-template-columns: 1fr; }
+  .game-title { font-size: 40px; letter-spacing: 6px; }
+}
