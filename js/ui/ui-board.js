@@ -73,7 +73,7 @@
       if (cashCost > 0) cost.push("$" + cashCost);
       html += '<button class="action-card' + (st && st.enabled ? "" : " disabled") + '" data-act="place" data-id="' + a.id + '" ' +
         'title="' + esc(a.desc + (st && !st.enabled && st.reason ? " — " + st.reason : "")) + '">' +
-        '<span class="action-head"><img class="action-icon-img" src="assets/img/actions/' + a.id + '.webp?v=3" alt="" width="60" height="60"><span class="action-name">' + esc(a.name) + '</span><span class="action-cost">' + cost.join(" ") + "</span></span>" +
+        '<span class="action-head"><img class="action-icon-img" src="assets/img/icons/' + a.id + '.webp?v=4" alt="" width="60" height="60"><span class="action-name">' + esc(a.name) + '</span><span class="action-cost">' + cost.join(" ") + "</span></span>" +
         '<span class="action-desc">' + esc(st && !st.enabled && st.reason ? st.reason : a.desc) + "</span></button>";
     });
     html += "</div>";
