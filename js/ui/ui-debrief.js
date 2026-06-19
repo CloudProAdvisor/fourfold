@@ -13,8 +13,9 @@
     var sc = a.score;
     var go = s.gameOver;
 
+    var heroImg = (go.type === "complete" && sc.rating && sc.rating.img) ? sc.rating.img : "assets/img/closing.webp";
     var html = '<div class="debrief-wrap">';
-    html += '<img class="debrief-hero" src="assets/img/closing.webp?v=2" alt="" width="1200" height="686">';
+    html += '<img class="debrief-hero" src="' + heroImg + '?v=3" alt="" width="1200" height="686">';
     html += '<h1 class="setup-title">' + esc(go.title) + "</h1>";
     html += '<p class="ending-text">' + esc(go.text) + "</p>";
 

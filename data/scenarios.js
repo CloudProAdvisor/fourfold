@@ -77,10 +77,10 @@
   ];
 
   BAM.DATA.ratings = [
-    { min: 65, name: "Fourfold Fruitful", blurb: "Profitable, transformational, sustainable — and still standing. This is what the movement hopes for." },
-    { min: 50, name: "Growing", blurb: "A real business doing real good. Keep tending all four columns." },
-    { min: 30, name: "Taking Root", blurb: "You survived Sorvana — most first ventures teach more than they earn." },
-    { min: 0,  name: "Seedling", blurb: "A hard season. Every practitioner has one. The lessons travel with you." }
+    { min: 65, name: "Fourfold Fruitful", img: "assets/img/endings/fruitful.webp", blurb: "Profitable, transformational, sustainable — and still standing. This is what the movement hopes for." },
+    { min: 50, name: "Growing", img: "assets/img/endings/growing.webp", blurb: "A real business doing real good. Keep tending all four columns." },
+    { min: 30, name: "Taking Root", img: "assets/img/endings/root.webp", blurb: "You survived Sorvana — most first ventures teach more than they earn." },
+    { min: 0,  name: "Seedling", img: "assets/img/endings/seedling.webp", blurb: "A hard season. Every practitioner has one. The lessons travel with you." }
   ];
 
   BAM.DATA.discussionQuestions = [

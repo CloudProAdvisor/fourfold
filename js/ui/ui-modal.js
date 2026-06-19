@@ -25,6 +25,7 @@
     show: function (opts) {
       var esc = UI.esc;
       var html = "";
+      if (opts.imgSrc) html += '<img class="modal-img" src="' + esc(opts.imgSrc) + '" alt="">';
       if (opts.kicker) html += '<div class="modal-kicker">' + esc(opts.kicker) + "</div>";
       html += '<h2 class="modal-title">' + esc(opts.title) + "</h2>";
       if (opts.bodyHTML) html += '<div class="modal-body">' + opts.bodyHTML + "</div>";

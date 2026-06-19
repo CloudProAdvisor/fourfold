@@ -73,7 +73,7 @@
       if (cashCost > 0) cost.push("$" + cashCost);
       html += '<button class="action-card' + (st && st.enabled ? "" : " disabled") + '" data-act="place" data-id="' + a.id + '" ' +
         'title="' + esc(a.desc + (st && !st.enabled && st.reason ? " — " + st.reason : "")) + '">' +
-        '<span class="action-head"><span class="action-icon">' + a.icon + '</span><span class="action-name">' + esc(a.name) + '</span><span class="action-cost">' + cost.join(" ") + "</span></span>" +
+        '<span class="action-head"><img class="action-icon-img" src="assets/img/actions/' + a.id + '.webp?v=3" alt="" width="60" height="60"><span class="action-name">' + esc(a.name) + '</span><span class="action-cost">' + cost.join(" ") + "</span></span>" +
         '<span class="action-desc">' + esc(st && !st.enabled && st.reason ? st.reason : a.desc) + "</span></button>";
     });
     html += "</div>";
@@ -134,6 +134,7 @@
       }
       if (r.insight) body += '<div class="insight">💡 <i>' + esc(r.insight) + "</i></div>";
       UI.modal.show({
+        imgSrc: ce.cardId ? "assets/img/events/" + ce.cardId + ".webp?v=3" : null,
         kicker: "What happened", title: r.title, bodyHTML: body,
         choices: [{ id: "_continue", label: "To the ledger ➜", enabled: true }],
         onChoose: function () { UI.dispatch({ type: "continue" }); }
@@ -150,6 +151,7 @@
     }
     var choices = BAM.engine.legalEventChoices(s);
     UI.modal.show({
+      imgSrc: ce.cardId ? "assets/img/events/" + ce.cardId + ".webp?v=3" : null,
       kicker: kicker, title: title, bodyHTML: "<p>" + esc(flavor) + "</p>",
       choices: choices,
       onChoose: function (id) { UI.dispatch({ type: "choose", choiceId: id }); }

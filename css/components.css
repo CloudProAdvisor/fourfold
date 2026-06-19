@@ -84,6 +84,10 @@ button:disabled { opacity: 0.5; cursor: not-allowed; }
 .action-card.disabled { opacity: 0.55; cursor: not-allowed; }
 .action-head { display: flex; align-items: center; gap: 8px; }
 .action-icon { font-size: 18px; }
+.action-icon-img {
+  width: 34px; height: 34px; border-radius: 8px; object-fit: cover; flex-shrink: 0;
+  background: #fdf6ea;
+}
 .action-name { font-weight: 600; color: var(--c-navy); flex: 1; }
 .action-cost { font-size: 12px; font-weight: 700; color: var(--c-warm); background: #fdf6ea; border-radius: 6px; padding: 2px 7px; white-space: nowrap; }
 .action-desc { font-size: 12px; color: var(--c-ink-soft); }
@@ -107,6 +111,10 @@ dialog#modal {
 dialog#modal::backdrop { background: rgba(18, 40, 68, 0.55); }
 dialog#modal[open]:not(:modal) { /* fallback positioning for ancient browsers */
   position: fixed; top: 8vh; left: 50%; transform: translateX(-50%); z-index: 50; display: block;
+}
+.modal-img {
+  display: block; width: calc(100% + 48px); margin: -22px -24px 14px; height: 180px;
+  object-fit: cover; border-radius: 14px 14px 0 0;
 }
 .modal-kicker { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--c-warm); font-weight: 700; }
 .modal-title { margin: 4px 0 10px; }
