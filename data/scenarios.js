@@ -15,18 +15,21 @@
       id: "textile",
       name: "Talem Textiles",
       blurb: "A garment workshop on Cooper Street. Steady demand, thin margins, lots of hands.",
+      img: "assets/img/textile.webp",
       hireCost: 4, skilledIncome: 1, demandCap: 5, trustBonus: 0
     },
     {
       id: "cafe",
       name: "Café Talem",
       blurb: "A riverside café where half the city's conversations happen. Relationships come easier; the market is smaller.",
+      img: "assets/img/cafe.webp",
       hireCost: 4, skilledIncome: 1, demandCap: 4, trustBonus: 1
     },
     {
       id: "digital",
       name: "Talem Digital",
       blurb: "A small software-services shop. Skilled staff are gold — and expensive to find.",
+      img: "assets/img/digital.webp",
       hireCost: 6, skilledIncome: 2, demandCap: 5, trustBonus: 0
     }
   ];

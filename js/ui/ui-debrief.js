@@ -14,6 +14,7 @@
     var go = s.gameOver;
 
     var html = '<div class="debrief-wrap">';
+    html += '<img class="debrief-hero" src="assets/img/closing.webp?v=2" alt="" width="1200" height="686">';
     html += '<h1 class="setup-title">' + esc(go.title) + "</h1>";
     html += '<p class="ending-text">' + esc(go.text) + "</p>";
 

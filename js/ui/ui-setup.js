@@ -12,7 +12,7 @@
     var el = document.getElementById("screen-title");
     var html =
       '<div class="title-wrap">' +
-      '<div class="title-mark">◆◆<br>◆◆</div>' +
+      '<img class="title-hero" src="assets/img/hero.webp?v=2" alt="" width="1200" height="686">' +
       '<h1 class="game-title">' + esc(BAM.DATA.meta.title) + "</h1>" +
       '<p class="tagline">' + esc(BAM.DATA.meta.tagline) + "</p>" +
       '<p class="title-sub">A Business As Mission game · ' + esc(BAM.DATA.meta.city) + ", " + esc(BAM.DATA.meta.country) + "</p>" +
@@ -37,6 +37,7 @@
       var h = '<div class="pick-row">';
       items.forEach(function (it) {
         h += '<button class="pick-card' + (it.id === selectedId ? " selected" : "") + '" data-act="pick" data-group="' + group + '" data-id="' + it.id + '">' +
+          (it.img ? '<img class="pick-img" src="' + it.img + '?v=2" alt="" width="720" height="540">' : "") +
           '<span class="pick-name">' + esc(it.name) + "</span>" +
           '<span class="pick-blurb">' + esc(it.blurb) + "</span></button>";
       });
